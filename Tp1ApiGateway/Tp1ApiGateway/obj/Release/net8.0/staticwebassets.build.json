@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uiRrg10t4VmjbaW22p9vZwc7l4dgCCMd2keK/Js/kL8=",
+  "Source": "Tp1ApiGateway",
+  "BasePath": "_content/Tp1ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

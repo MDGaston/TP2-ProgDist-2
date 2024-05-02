@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "34/BX1+uvBAg2ebLLJCk8nttvKbwNCF9KkzpHrjSEAw=",
+  "Source": "Tp1ApiGateway",
+  "BasePath": "_content/Tp1ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

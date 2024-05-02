@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Tp1ApiGateway.props" />
+</Project>
