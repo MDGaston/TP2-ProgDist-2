@@ -4,8 +4,6 @@ using WebApiUserManagement.Context;
 using WebApiUserManagement.Models;
 using BCrypt.Net;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace WebApiUserManagement.Controllers
 {
     [Route("api/[controller]")]
@@ -92,7 +90,7 @@ namespace WebApiUserManagement.Controllers
 
             return Ok(userInfo);
         }
-
+        // Login de usuario
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] AuthenticationRequest request)
         {
@@ -110,6 +108,8 @@ namespace WebApiUserManagement.Controllers
             public string Username { get; set; }
             public string Password { get; set; }
         }
+
+        //Chekeo el role del usuario
         [HttpGet("isAdmin/{username}")]
         public async Task<IActionResult> isAdmin(string username)
         {

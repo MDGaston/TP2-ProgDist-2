@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tp1UserControllManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09a55643114685be5de04dbca22531ffecf5c239")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tp1UserControllManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tp1UserControllManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

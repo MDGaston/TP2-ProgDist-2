@@ -17,7 +17,7 @@ namespace WebGateway.Controllers
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly static Dictionary<string, TokenInfo> _activeTokens = new Dictionary<string, TokenInfo>();
         private readonly string _jwtSecret;
-
+        private readonly static int _expTime = 24; // Variable global de tiempode expiracion del token en horas
 
         public AuthenticationFilterService(IHttpClientFactory httpClientFactory)
         {
@@ -38,13 +38,14 @@ namespace WebGateway.Controllers
                 httpRequest.Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
                 var response        = await client.SendAsync(httpRequest);
 
+                //Si el login fue exitoso genero el token con el tiempo de expiracion y me guardo junto con el token el tipo de usuario
                 if (response.IsSuccessStatusCode)
                 {
                     var jwtoken = GenerateJwtToken(request.Username);
                     var tokenInfo = new TokenInfo
                     {
                         Token = jwtoken,
-                        ExpirationTime = DateTime.UtcNow.AddHours(24),
+                        ExpirationTime = DateTime.UtcNow.AddHours(_expTime),
                         UserRole = GetUserRoleAsync(request.Username).Result
                     };
                     _activeTokens[jwtoken] = tokenInfo;
@@ -69,7 +70,7 @@ namespace WebGateway.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, username) }),
-                Expires = DateTime.UtcNow.AddHours(24),
+                Expires = DateTime.UtcNow.AddHours(_expTime),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

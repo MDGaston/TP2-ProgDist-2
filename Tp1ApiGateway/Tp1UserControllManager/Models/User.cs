@@ -4,6 +4,7 @@ using WebApiUserManagement.Context;
 
 namespace WebApiUserManagement.Models
 {
+    //Modelo de la db de Usuarios
     public class User
     {
         [Key]
@@ -28,6 +29,7 @@ namespace WebApiUserManagement.Models
         public bool IsDeleted { get; set; } = false;
         public DateTime DeleteTime { get; set;} = DateTime.MinValue;
     }
+    //Verificacion de no repetidos para username
     public class UniqueUsername : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -44,6 +46,7 @@ namespace WebApiUserManagement.Models
             return ValidationResult.Success;
         }
     }
+    //Verificacion de que el rol ingresado sea valido
     public class ValidRoleAttribute : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)

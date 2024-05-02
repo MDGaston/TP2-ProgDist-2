@@ -12,7 +12,7 @@ namespace Tp1ApiGateway.Controllers
         {
             _httpClient = httpClientFactory.CreateClient();
         }
-
+        //Endpoint de entrada para las request a mi api de usuarios
         [HttpGet("{*path}")]
         [HttpPost("{*path}")]
         [HttpPut("{*path}")]

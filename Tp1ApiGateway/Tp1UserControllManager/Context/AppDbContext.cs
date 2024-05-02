@@ -12,7 +12,7 @@ namespace WebApiUserManagement.Context
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
             try
-            {
+            {   //Creacion y conexion de la db 
                 var dbCreator = Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator;
                 if (dbCreator != null)
                 {
