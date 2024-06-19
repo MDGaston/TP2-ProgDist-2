@@ -30,3 +30,11 @@ G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\Tp1Use
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\obj\Debug\docker-c.35A3FFBA.Up2Date
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\Properties\launchSettings.json
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\TrackingService.deps.json
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\TrackingService.runtimeconfig.json
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\TrackingService.exe
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\TrackingService.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\RabbitMQ.Client.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\Newtonsoft.Json.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\bin\Debug\TrackingService.pdb

@@ -136,3 +136,5 @@ G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllM
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllManager\obj\Debug\net8.0\Tp1UserControllManager.pdb
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllManager\obj\Debug\net8.0\Tp1UserControllManager.genruntimeconfig.cache
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllManager\obj\Debug\net8.0\ref\Tp1UserControllManager.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllManager\bin\Debug\net8.0\RabbitMQ.Client.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1UserControllManager\obj\Debug\net8.0\Tp1UserControllManager.sourcelink.json

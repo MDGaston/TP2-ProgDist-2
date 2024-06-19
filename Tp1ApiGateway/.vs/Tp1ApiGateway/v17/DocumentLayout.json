@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\tp1usercontrollmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|solutionrelative:tp1usercontrollmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|solutionrelative:trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\tp1usercontrollmanager\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|solutionrelative:tp1usercontrollmanager\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\tp1usercontrollmanager\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED027370-403F-4F84-BCCE-88DEAFDF000B}|Tp1UserControllManager\\Tp1UserControllManager.csproj|solutionrelative:tp1usercontrollmanager\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\trackingconsumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|solutionrelative:trackingconsumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RabbitMqConsumer.cs",
+              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
+              "RelativeDocumentMoniker": "TrackingConsumer\\RabbitMqConsumer.cs",
+              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
+              "RelativeToolTip": "TrackingConsumer\\RabbitMqConsumer.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T02:41:09.446Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Program.cs",
-              "RelativeDocumentMoniker": "Tp1UserControllManager\\Program.cs",
-              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Program.cs",
-              "RelativeToolTip": "Tp1UserControllManager\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\Program.cs",
+              "RelativeDocumentMoniker": "TrackingConsumer\\Program.cs",
+              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\Program.cs",
+              "RelativeToolTip": "TrackingConsumer\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T14:05:30.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Dockerfile",
-              "RelativeDocumentMoniker": "Tp1UserControllManager\\Dockerfile",
-              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Dockerfile",
-              "RelativeToolTip": "Tp1UserControllManager\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-02T14:05:23.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Tp1UserControllManager\\Models\\User.cs",
-              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\Tp1UserControllManager\\Models\\User.cs",
-              "RelativeToolTip": "Tp1UserControllManager\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T14:04:18.348Z",
+              "WhenOpened": "2024-06-17T02:41:08.703Z",
               "EditorCaption": ""
             }
           ]

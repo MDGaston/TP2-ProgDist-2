@@ -39,3 +39,6 @@ G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\ob
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\obj\Debug\net8.0\Tp1ApiGateway.genruntimeconfig.cache
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\obj\Debug\net8.0\ref\Tp1ApiGateway.dll
 G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\bin\Debug\net8.0\launchSettings.json
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\bin\Debug\net8.0\Properties\launchSettings.json
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\bin\Debug\net8.0\RabbitMQ.Client.dll
+G:\Proyectos de programacion\TP1 ProgDist2\MainTp\Tp1ApiGateway\Tp1ApiGateway\obj\Debug\net8.0\Tp1ApiGateway.sourcelink.json
