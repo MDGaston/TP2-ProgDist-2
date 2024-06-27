@@ -5,7 +5,7 @@
 Primero hay que abrir la consola y situarse en el directorio
 
 ```bash
-cd .../Tp1ApiGateway
+cd .../Tp2TrackingApi
 ```
 
 Una vez situados correr el docker compose
