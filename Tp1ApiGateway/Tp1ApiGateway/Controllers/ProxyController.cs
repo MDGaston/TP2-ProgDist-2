@@ -10,6 +10,7 @@ namespace Tp1ApiGateway.Controllers
         private readonly ILogger<ProxyController> _logger;
         private readonly string _userApiBaseUrl = "http://tp1usercontrollmanager:8000/api"; // URL base para la API de gestión de usuarios
         private readonly string _trackingApiBaseUrl = "http://tp2trackingservice:8001/api"; // URL base para la API de tracking
+        private readonly string _blacklistBaseUrl = "http://blacklistapi:8003/api"; // URL base para la API de tracking
 
         public ProxyController(IHttpClientFactory httpClientFactory, ILogger<ProxyController> logger)
         {
@@ -36,6 +37,11 @@ namespace Tp1ApiGateway.Controllers
             {
                 // Construir la URL completa para la API de tracking
                 requestUrl = $"{_trackingApiBaseUrl}/{path}";
+            }
+            else if (path.StartsWith("Blacklist"))
+            {
+                // Construir la URL completa para la API de tracking
+                requestUrl = $"{_blacklistBaseUrl}/{path}";
             }
             else
             {

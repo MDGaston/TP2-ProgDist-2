@@ -68,9 +68,25 @@ services:
     volumes:
       - ./Logs/trackingConsumer:/app/trackingLog  # Directorio específico para los logs de trackingConsumer
     networks:
-      - my_network
+      my_network:
+        ipv4_address: 172.16.238.20
     depends_on:
       - rabbitmq
+  
+  blacklistapi:
+    image: ${DOCKER_REGISTRY-}blacklistapi
+    build:
+      context: .
+      dockerfile: BlacklistApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8003
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./Logs/blacklist:/app/Logs/blacklist  # Directorio específico para los logs de blacklist
+    networks:
+      - my_network
 
   database:
     image: mcr.microsoft.com/mssql/server:2022-latest

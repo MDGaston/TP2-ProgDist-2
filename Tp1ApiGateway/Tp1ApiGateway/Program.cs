@@ -8,7 +8,7 @@ Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .WriteTo.Console()
-    .WriteTo.File("Logs/app.log", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("/app/Logs/app.log", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 // Añade Serilog a los servicios

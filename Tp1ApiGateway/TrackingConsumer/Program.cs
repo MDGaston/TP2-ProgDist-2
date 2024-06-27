@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
@@ -12,7 +13,7 @@ namespace TrackingConsumer
             // Configuración de Serilog
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                .WriteTo.File("logs/trackingLog.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.File("/app/trackingLog/trackingLog.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             // Configuración de la aplicación
@@ -20,14 +21,15 @@ namespace TrackingConsumer
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            var loggerFactory = LoggerFactory.Create(builder =>
-            {
-                builder.AddSerilog(dispose: true); // Agregar Serilog con dispose: true para liberar recursos correctamente
-            });
+            var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection, configuration);
 
-            var logger = loggerFactory.CreateLogger<RabbitMqConsumer>();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            var rabbitMqConsumer = new RabbitMqConsumer(configuration, logger);
+            var logger = serviceProvider.GetRequiredService<ILogger<RabbitMqConsumer>>();
+            var httpClientFactory = serviceProvider.GetRequiredService<IHttpClientFactory>();
+
+            var rabbitMqConsumer = new RabbitMqConsumer(configuration, logger, httpClientFactory);
 
             Console.WriteLine("Tracking Consumer running. Press Ctrl+C to exit.");
 
@@ -37,6 +39,13 @@ namespace TrackingConsumer
                 // Agregamos una pausa para no consumir recursos excesivamente
                 System.Threading.Thread.Sleep(1000);
             }
+        }
+
+        private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddHttpClient();
+            services.AddLogging(configure => configure.AddSerilog())
+                    .AddTransient<RabbitMqConsumer>();
         }
     }
 }

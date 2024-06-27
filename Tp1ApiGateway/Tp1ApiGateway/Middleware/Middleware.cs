@@ -47,6 +47,14 @@ namespace Tp1ApiGateway.Middleware
                         await context.Response.WriteAsync("Forbidden: Only admins can access this endpoint");
                         return;
                     }
+
+                    // Permitir acceso al endpoint /api/trackingService/event para todos los usuarios
+                    if (context.Request.Path.Equals("/api/trackingService/event", StringComparison.OrdinalIgnoreCase) &&
+                        context.Request.Method.Equals("POST", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await _next(context);
+                        return;
+                    }
                     await _next(context);
                     return;
                 }

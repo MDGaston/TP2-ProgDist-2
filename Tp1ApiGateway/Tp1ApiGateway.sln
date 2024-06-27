@@ -11,7 +11,9 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingService", "TrackingService\TrackingService.csproj", "{7E935D0B-D9ED-4BB6-9847-C118C5AA1A6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingConsumer", "TrackingConsumer\TrackingConsumer.csproj", "{9E14532A-46FC-4B25-B6CB-C12F950D39A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingConsumer", "TrackingConsumer\TrackingConsumer.csproj", "{9E14532A-46FC-4B25-B6CB-C12F950D39A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackListAPI", "BlackListAPI\BlackListAPI.csproj", "{069485AD-FE34-48B7-96B0-93F8EF1F24FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9E14532A-46FC-4B25-B6CB-C12F950D39A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E14532A-46FC-4B25-B6CB-C12F950D39A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E14532A-46FC-4B25-B6CB-C12F950D39A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{069485AD-FE34-48B7-96B0-93F8EF1F24FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{069485AD-FE34-48B7-96B0-93F8EF1F24FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{069485AD-FE34-48B7-96B0-93F8EF1F24FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{069485AD-FE34-48B7-96B0-93F8EF1F24FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
