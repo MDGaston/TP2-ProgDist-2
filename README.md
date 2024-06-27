@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TP1-ProgDist2
 
 # Instrucciones Trabajo práctico inicial
