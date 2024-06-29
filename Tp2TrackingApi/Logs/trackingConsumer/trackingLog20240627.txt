@@ -1,7 +1,0 @@
-2024-06-27 01:27:23.004 +00:00 [INF] Consumer started.
-2024-06-27 01:27:43.200 +00:00 [INF] Received message: {"EventType":"visit_url","Url":"blacklistedURL2"}
-2024-06-27 01:27:43.208 +00:00 [INF] Start processing HTTP request GET http://blacklistapi:8003/api/blacklist/check?url=blacklistedURL2
-2024-06-27 01:27:43.209 +00:00 [INF] Sending HTTP request GET http://blacklistapi:8003/api/blacklist/check?url=blacklistedURL2
-2024-06-27 01:27:43.256 +00:00 [INF] Received HTTP response headers after 43.9159ms - 200
-2024-06-27 01:27:43.260 +00:00 [INF] End processing HTTP request after 55.9742ms - 200
-2024-06-27 01:27:43.264 +00:00 [INF] "2024-06-27T01:27:43.2636533+00:00" - [BLACKLISTED URL CRITICAL] {"EventType":"visit_url","Url":"blacklistedURL2"}
