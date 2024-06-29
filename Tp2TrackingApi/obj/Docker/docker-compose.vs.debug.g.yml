@@ -7,6 +7,7 @@ services:
     build:
       args:
         BUILD_CONFIGURATION: Debug
+      target: base
       labels:
         com.microsoft.created-by: "visual-studio"
         com.microsoft.visual-studio.project-name: "BlackListAPI"

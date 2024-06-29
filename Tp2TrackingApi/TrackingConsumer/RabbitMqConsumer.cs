@@ -8,6 +8,7 @@ using RabbitMQ.Client.Events;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Serilog;
+using System.Net.Sockets;
 
 public class RabbitMqConsumer
 {
@@ -25,21 +26,29 @@ public class RabbitMqConsumer
 
         var factory = new ConnectionFactory()
         {
-            HostName = _configuration["RabbitMq:HostName"], // Obtén el nombre de host de la configuración
-            UserName = _configuration["RabbitMq:UserName"], // Obtén el nombre de usuario de la configuración
-            Password = _configuration["RabbitMq:Password"], // Obtén la contraseña de la configuración
+            HostName = _configuration["RabbitMq:HostName"],
+            UserName = _configuration["RabbitMq:UserName"],
+            Password = _configuration["RabbitMq:Password"],
         };
 
-        // Intentamos conectar y consumir mensajes
         try
         {
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
+
+            ConfigureDeadLetterQueue(_channel);
+
+            var args = new Dictionary<string, object>
+            {
+                { "x-dead-letter-exchange", "" },
+                { "x-dead-letter-routing-key", "dead_letter_queue" }
+            };
+
             _channel.QueueDeclare(queue: "visit_url_queue",
                                   durable: true,
                                   exclusive: false,
                                   autoDelete: false,
-                                  arguments: null);
+                                  arguments: args);
 
             var consumer = new EventingBasicConsumer(_channel);
             consumer.Received += async (model, ea) =>
@@ -48,12 +57,21 @@ public class RabbitMqConsumer
                 var message = Encoding.UTF8.GetString(body);
                 _logger.LogInformation("Received message: {Message}", message);
 
-                var logMessage = await CheckAndAnnotateMessage(message);
-                LogToFile("/app/trackingLog/trackingLog.txt", logMessage);
+                try
+                {
+                    var logMessage = await CheckAndAnnotateMessage(message);
+                    LogToFile("/app/trackingLog/trackingLog.txt", logMessage);
+                    _channel.BasicAck(ea.DeliveryTag, false);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error processing message, sending to DLQ");
+                    _channel.BasicNack(ea.DeliveryTag, false, false);
+                }
             };
 
             _channel.BasicConsume(queue: "visit_url_queue",
-                                  autoAck: true,
+                                  autoAck: false,
                                   consumer: consumer);
 
             _logger.LogInformation("Consumer started.");
@@ -61,7 +79,7 @@ public class RabbitMqConsumer
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error starting RabbitMqConsumer.");
-            throw; // Re-lanza la excepción para que la aplicación no continúe sin conexión
+            throw;
         }
     }
 
@@ -108,11 +126,31 @@ public class RabbitMqConsumer
             }
             _logger.LogError("Error checking URL against blacklist: {StatusCode}", response.StatusCode);
         }
+        catch (HttpRequestException ex) when (ex.InnerException is SocketException)
+        {
+            _logger.LogWarning("Error connecting to blacklist service");
+            throw; // Re-lanza la excepción para enviar el mensaje a la DLQ
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogWarning("Error checking URL against blacklist");
+            throw; // Re-lanza la excepción para enviar el mensaje a la DLQ
+        }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Exception while checking URL against blacklist");
+            throw; // Re-lanza la excepción para enviar el mensaje a la DLQ
         }
         return false;
+    }
+
+    private void ConfigureDeadLetterQueue(IModel channel)
+    {
+        channel.QueueDeclare(queue: "dead_letter_queue",
+                             durable: true,
+                             exclusive: false,
+                             autoDelete: false,
+                             arguments: null);
     }
 
     private void LogToFile(string filePath, string message)

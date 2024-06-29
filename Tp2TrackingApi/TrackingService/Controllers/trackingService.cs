@@ -29,10 +29,13 @@ namespace TrackingService.Controllers
         public async Task<IActionResult> TrackEvent([FromBody] TrackingEvent trackingEvent)
         {
             if(!ModelState.IsValid) return BadRequest();
+
             _messageProducer.SendingMessage(trackingEvent);
+
             var trackingEventDb = new TrackingEventDb { EventType = trackingEvent.EventType, Url = trackingEvent.Url };
             await _context.TrackingEvents.AddAsync(trackingEventDb);
             await _context.SaveChangesAsync();
+
             // Si es un evento 'click', enviar también un 'visit_url' con la URL recibida
             if (trackingEvent.EventType == "click" && !string.IsNullOrEmpty(trackingEvent.Url))
             {

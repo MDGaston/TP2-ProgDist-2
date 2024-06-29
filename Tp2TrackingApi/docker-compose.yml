@@ -17,6 +17,7 @@ services:
     volumes:
       - ./Tp1ApiGateway/appsettings.json:/app/appsettings.json
       - ./Logs/tp1apigateway:/app/Logs  # Directorio específico para los logs de tp1apigateway
+    command: sh -c "chmod -R 777 /app/Logs && dotnet Tp1ApiGateway.dll"  # Cambiar permisos
 
   tp1usercontrollmanager:
     image: ${DOCKER_REGISTRY-}tp1usercontrollmanager
@@ -30,7 +31,7 @@ services:
       - "8000:8000"
     networks:
       - my_network
-  
+
   rabbitmq:
     image: rabbitmq:3-management
     ports:
@@ -72,12 +73,13 @@ services:
         ipv4_address: 172.16.238.20
     depends_on:
       - rabbitmq
-  
+    command: sh -c "chmod -R 777 /app/trackingLog && sleep 30 && dotnet TrackingConsumer.dll"  # Cambiar permisos
+
   blacklistapi:
     image: ${DOCKER_REGISTRY-}blacklistapi
     build:
       context: .
-      dockerfile: BlacklistApi/Dockerfile
+      dockerfile: BlackListAPI/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8003
@@ -87,6 +89,7 @@ services:
       - ./Logs/blacklist:/app/Logs/blacklist  # Directorio específico para los logs de blacklist
     networks:
       - my_network
+    command: sh -c "chmod -R 777 /app/Logs/blacklist && dotnet BlackListAPI.dll"  # Cambiar permisos
 
   database:
     image: mcr.microsoft.com/mssql/server:2022-latest

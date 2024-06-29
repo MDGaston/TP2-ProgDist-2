@@ -1,0 +1,26 @@
+2024-06-29 20:13:04.250 +00:00 [INF] Consumer started.
+2024-06-29 20:13:38.553 +00:00 [INF] Received message: {"EventType":"visit_url","Url":"blacklistedURL"}
+2024-06-29 20:13:38.562 +00:00 [INF] Start processing HTTP request GET http://blacklistapi:8003/api/blacklist/check?url=blacklistedURL
+2024-06-29 20:13:38.563 +00:00 [INF] Sending HTTP request GET http://blacklistapi:8003/api/blacklist/check?url=blacklistedURL
+2024-06-29 20:13:42.354 +00:00 [WRN] Error connecting to blacklist service
+2024-06-29 20:13:42.355 +00:00 [ERR] Error processing message, sending to DLQ
+System.Net.Http.HttpRequestException: Name or service not known (blacklistapi:8003)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at RabbitMqConsumer.CheckIfUrlIsBlacklisted(String url) in /src/TrackingConsumer/RabbitMqConsumer.cs:line 121
+   at RabbitMqConsumer.CheckAndAnnotateMessage(String message) in /src/TrackingConsumer/RabbitMqConsumer.cs:line 91
+   at RabbitMqConsumer.<.ctor>b__5_0(Object model, BasicDeliverEventArgs ea) in /src/TrackingConsumer/RabbitMqConsumer.cs:line 62

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|solutionrelative:trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\trackingconsumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|solutionrelative:trackingconsumer\\rabbitmqconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|g:\\proyectos de programacion\\tp1 progdist2\\maintp\\tp1apigateway\\trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E14532A-46FC-4B25-B6CB-C12F950D39A4}|TrackingConsumer\\TrackingConsumer.csproj|solutionrelative:trackingconsumer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RabbitMqConsumer.cs",
-              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
-              "RelativeDocumentMoniker": "TrackingConsumer\\RabbitMqConsumer.cs",
-              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
-              "RelativeToolTip": "TrackingConsumer\\RabbitMqConsumer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:14:56.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\Program.cs",
               "RelativeDocumentMoniker": "TrackingConsumer\\Program.cs",
               "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\Program.cs",
               "RelativeToolTip": "TrackingConsumer\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAnAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T23:12:50.644Z",
+              "WhenOpened": "2024-06-29T20:04:27.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RabbitMqConsumer.cs",
+              "DocumentMoniker": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
+              "RelativeDocumentMoniker": "TrackingConsumer\\RabbitMqConsumer.cs",
+              "ToolTip": "G:\\Proyectos de programacion\\TP1 ProgDist2\\MainTp\\Tp1ApiGateway\\TrackingConsumer\\RabbitMqConsumer.cs",
+              "RelativeToolTip": "TrackingConsumer\\RabbitMqConsumer.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAgwIgAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T19:40:26.436Z",
               "EditorCaption": ""
             }
           ]
