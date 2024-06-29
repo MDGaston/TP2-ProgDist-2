@@ -220,7 +220,7 @@
 			"name": "Blacklist",
 			"item": [
 				{
-					"name": "/GET Blacklist/add",
+					"name": "/Post Blacklist/add",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -303,7 +303,7 @@
 			"name": "Tracking service",
 			"item": [
 				{
-					"name": "/GET Track event",
+					"name": "/Post Track event",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -369,7 +369,7 @@
 	"variable": [
 		{
 			"key": "Token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzE5NDUxNjQ0LCJleHAiOjE3MTk1MzgwNDQsImlhdCI6MTcxOTQ1MTY0NH0.WQHZelTBRT9B1S4nPDGfEuYLGMWQhdhNJId8XsUN_to",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzE5NjkxOTg1LCJleHAiOjE3MTk3NzgzODUsImlhdCI6MTcxOTY5MTk4NX0.bkmHN7IY_QMROkZaeFjtWdDP0jIuRuK76fkLa9FP1wI",
 			"type": "string"
 		}
 	]
