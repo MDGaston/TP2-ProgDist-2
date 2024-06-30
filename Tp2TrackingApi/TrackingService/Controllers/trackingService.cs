@@ -29,6 +29,11 @@ namespace TrackingService.Controllers
         public async Task<IActionResult> TrackEvent([FromBody] TrackingEvent trackingEvent)
         {
             if(!ModelState.IsValid) return BadRequest();
+            // Verificar que el EventType sea válido
+            if (trackingEvent.EventType != "click" && trackingEvent.EventType != "visit_url")
+            {
+                return BadRequest(new { error = $"Unsupported event type: {trackingEvent.EventType}. Please provide a valid event type." });
+            }
 
             _messageProducer.SendingMessage(trackingEvent);
 
